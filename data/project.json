@@ -1,0 +1,267 @@
+{
+  "name": "root",
+  "path": "/",
+  "type": "Directory",
+  "children": [
+      {
+          "name": "data",
+          "path": "/data",
+          "type": "Directory",
+          "children": [
+              {
+                  "name": "project.json",
+                  "path": "/data/project.json",
+                  "type": "File",
+                  "children": [],
+                  "adjacency": []
+              }
+          ],
+          "adjacency": []
+      },
+      {
+          "name": "domain",
+          "path": "/domain",
+          "type": "Directory",
+          "children": [
+              {
+                  "name": "project-structure",
+                  "path": "/domain/project-structure",
+                  "type": "Directory",
+                  "children": [
+                      {
+                          "name": "BinaryTree.js",
+                          "path": "/domain/project-structure/BinaryTree.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "Directory.js",
+                          "path": "/domain/project-structure/Directory.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "File.js",
+                          "path": "/domain/project-structure/File.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "UnderectedGraph.js",
+                          "path": "/domain/project-structure/UnderectedGraph.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      }
+                  ],
+                  "adjacency": []
+              },
+              {
+                  "name": "svg",
+                  "path": "/domain/svg",
+                  "type": "Directory",
+                  "children": [
+                      {
+                          "name": "attributes",
+                          "path": "/domain/svg/attributes",
+                          "type": "Directory",
+                          "children": [
+                              {
+                                  "name": "Color.js",
+                                  "path": "/domain/svg/attributes/Color.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Coordinate.js",
+                                  "path": "/domain/svg/attributes/Coordinate.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Fill.js",
+                                  "path": "/domain/svg/attributes/Fill.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Font.js",
+                                  "path": "/domain/svg/attributes/Font.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Radius.js",
+                                  "path": "/domain/svg/attributes/Radius.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Size.js",
+                                  "path": "/domain/svg/attributes/Size.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Stroke.js",
+                                  "path": "/domain/svg/attributes/Stroke.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Transition.js",
+                                  "path": "/domain/svg/attributes/Transition.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              }
+                          ],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "helpers",
+                          "path": "/domain/svg/helpers",
+                          "type": "Directory",
+                          "children": [
+                              {
+                                  "name": "Attribute.js",
+                                  "path": "/domain/svg/helpers/Attribute.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Container.js",
+                                  "path": "/domain/svg/helpers/Container.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Element.js",
+                                  "path": "/domain/svg/helpers/Element.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              },
+                              {
+                                  "name": "Figure.js",
+                                  "path": "/domain/svg/helpers/Figure.js",
+                                  "type": "File",
+                                  "children": [],
+                                  "adjacency": []
+                              }
+                          ],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "Svg.js",
+                          "path": "/domain/svg/Svg.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "SvgCircle.js",
+                          "path": "/domain/svg/SvgCircle.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "SvgLine.js",
+                          "path": "/domain/svg/SvgLine.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "SvgPathBezier.js",
+                          "path": "/domain/svg/SvgPathBezier.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "SvgPathLine.js",
+                          "path": "/domain/svg/SvgPathLine.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "SvgRect.js",
+                          "path": "/domain/svg/SvgRect.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      },
+                      {
+                          "name": "SvgText.js",
+                          "path": "/domain/svg/SvgText.js",
+                          "type": "File",
+                          "children": [],
+                          "adjacency": []
+                      }
+                  ],
+                  "adjacency": []
+              }
+          ],
+          "adjacency": []
+      },
+      {
+          "name": "future",
+          "path": "/future",
+          "type": "Directory",
+          "children": [
+              {
+                  "name": "lineWithMarker.html",
+                  "path": "/future/lineWithMarker.html",
+                  "type": "File",
+                  "children": [],
+                  "adjacency": []
+              }
+          ],
+          "adjacency": []
+      },
+      {
+          "name": "index.html",
+          "path": "/index.html",
+          "type": "File",
+          "children": [],
+          "adjacency": []
+      },
+      {
+          "name": "LICENSE",
+          "path": "/LICENSE",
+          "type": "File",
+          "children": [],
+          "adjacency": []
+      },
+      {
+          "name": "main",
+          "path": "/main.mjs",
+          "type": "File",
+          "children": [],
+          "adjacency": []
+      },
+      {
+          "name": "README.md",
+          "path": "/README.md",
+          "type": "File",
+          "children": [],
+          "adjacency": []
+      }
+  ],
+  "adjacency": []
+}
