@@ -1,10 +1,7 @@
 import SvgGroup from '../svg/SvgGroup.js'
 import SvgLine from '../svg/SvgLine.js'
 import Coordinate from '../svg/attributes/Coordinate.js'
-import Radius from '../svg/attributes/Radius.js'
-import Fill from '../svg/attributes/Fill.js'
 import Stroke from '../svg/attributes/Stroke.js'
-import Font from '../svg/attributes/Font.js'
 import Color from '../svg/attributes/Color.js'
 
 class DisplayJoinLine {

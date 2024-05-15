@@ -9,20 +9,24 @@ import Stroke from '../svg/attributes/Stroke.js'
 import Font from '../svg/attributes/Font.js'
 import Color from '../svg/attributes/Color.js'
 
-class DisplayDirectory {
+class DisplayFileSystemElement {
   #x
   #y
   #step
   #ratio
   #color = 'black'
   #directory
+  #clickListener
 
-  constructor(coordinate, displayOptions, fileSystemElement) {
+  constructor(coordinate, displayOptions, fileSystemElement, clickListener) {
     this.#ratio = displayOptions.calculate().ratio
     this.#step = displayOptions.calculate().step
     this.#x = coordinate.calculate().x
     this.#y = coordinate.calculate().y
     this.#directory = fileSystemElement
+    if (clickListener) {
+      this.#clickListener = clickListener.getListener()
+    }
   }
 
   toSvgGroup() {
@@ -31,6 +35,11 @@ class DisplayDirectory {
     const textOffsetX = this.#x + this.#step / 2
     const textOffsetY = this.#y + this.#step / 6
     const group = new SvgGroup()
+    const joinLine = new SvgLine(
+      new Coordinate(this.#x - this.#step, this.#y),
+      new Coordinate(this.#x - this.#step, this.#y - this.#step),
+      new Stroke(new Color(this.#color))
+    )
     const line = new SvgLine(
       new Coordinate(this.#x - this.#step, this.#y),
       new Coordinate(this.#x, this.#y),
@@ -48,11 +57,18 @@ class DisplayDirectory {
       new Fill(new Color(this.#color))
     )
     text.write(this.#directory.getName())
+    group.append(joinLine)
     group.append(circle)
     group.append(line)
     group.append(text)
+    if (this.#clickListener) {
+      group.addListenerClick(
+        this.#clickListener.key, 
+        () => this.#clickListener.callback(this.#directory)
+      )
+    }
     return group
   }
 }
 
-export default DisplayDirectory
+export default DisplayFileSystemElement

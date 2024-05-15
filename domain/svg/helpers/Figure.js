@@ -6,6 +6,7 @@ class Figure {
   #attributes
   #mark
   #html
+  #callbacks = new Map()
 
   constructor(element, attributes) {
     this.#element = element
@@ -47,6 +48,11 @@ class Figure {
     const parent = this.toExtractHTML()
     const child = figure.toExtractHTML()
     parent.appendChild(child)
+  }
+
+  addListenerClick(key, callback) {
+    this.#callbacks.set(key, callback)
+    this.#html.addEventListener('click', callback)
   }
 }
 

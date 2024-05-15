@@ -1,17 +1,15 @@
 import DisplayOptions from './DisplayOptions.js'
-import DisplayRootDirectory from './DisplayRootDirectory.js'
-import DisplayDirectory from './DisplayDirectory.js'
-import DisplayFile from './DisplayFile.js'
+import DisplayFileSystemElement from './DisplayFileSystemElement.js'
 import FileSystemElement from './FileSystemElement.js'
 import Svg from '../svg/Svg.js'
 import Coordinate from '../svg/attributes/Coordinate.js'
 import Size from '../svg/attributes/Size.js'
 import Matrix from './Matrix.js'
+import ClickListener from '../svg/attributes/ClickListener.js'
 import DisplayJoinLine from './DisplayJoinLine.js'
 
 class DisplayFileSysytem {
   #tree
-  #column = 0
   #ratio = 1
   #step = 20
 
@@ -62,7 +60,7 @@ class DisplayFileSysytem {
       const column = matrix[xi]
       for (let yi = 0; yi < column.length; yi++) {
         if (matrix[xi][yi]) {
-          const node = new DisplayDirectory(
+          const node = new DisplayFileSystemElement(
             new Coordinate(
               xi * this.#step * this.#ratio + 20,
               yi * this.#step * this.#ratio + 20
@@ -72,7 +70,8 @@ class DisplayFileSysytem {
               ratio: this.#ratio,
               color: 'black',
             }),
-            new FileSystemElement(matrix[xi][yi].path)
+            new FileSystemElement(matrix[xi][yi].path),
+            new ClickListener((file) => console.log(file))
           )
           svgContainer.append(node.toSvgGroup())
         }
@@ -82,29 +81,6 @@ class DisplayFileSysytem {
     const container = document.getElementById('svg-container')
     container.innerHTML = ''
     container.append(svgContainer.toExtractHTML())
-
-    // setTimeout(() => {
-    //   const svgContainer = new Svg(new Size(`50%`, `97svh`))
-    //   for (const svgElement of arraySvgElements) {
-    //     svgContainer.append(svgElement.toSvgGroup())
-    //   }
-    //   document
-    //     .getElementById('svg-container')
-    //     .append(svgContainer.toExtractHTML())
-    // }, 1000)
-    //
-    // new Promise((resolve, reject) => {
-    //   // this.#processing(this.#tree)
-    // }).then((array) => {
-    // const svgContainer = new Svg(new Size(`50%`, `97svh`))
-    // for (const svgElement of array) {
-    //   svgContainer.append(svgElement.toSvgGroup())
-    // }
-    // svgContainer.append(root.toSvgGroup())
-    // document
-    //   .getElementById('svg-container')
-    //   .append(svgContainer.toExtractHTML())
-    // })
   }
 }
 
