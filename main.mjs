@@ -1,3 +1,6 @@
+'use-strict'
+
 import { DisplayFileSysytem } from './domain/project-structure/DisplayFileSystem.js'
 
-new DisplayFileSysytem()
+const displayFileSystem = new DisplayFileSysytem()
+console.dir(displayFileSystem)

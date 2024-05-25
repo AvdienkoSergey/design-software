@@ -1,3 +1,5 @@
+'use-strict'
+
 import { Attribute } from './Attribute.js'
 import { Transition } from '../attributes/Transition.js'
 

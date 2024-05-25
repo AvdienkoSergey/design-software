@@ -1,3 +1,5 @@
+'use-strict'
+
 import { SvgGroup } from '../svg/SvgGroup.js'
 import { SvgCircle } from '../svg/SvgCircle.js'
 import { SvgText } from '../svg/SvgText.js'

@@ -1,3 +1,5 @@
+'use-strict'
+
 import { DisplayOptions } from './DisplayOptions.js'
 import { DisplayFileSystemElement } from './DisplayFileSystemElement.js'
 import { FileSystemElement } from './FileSystemElement.js'

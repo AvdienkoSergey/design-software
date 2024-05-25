@@ -1,3 +1,5 @@
+'use-strict'
+
 class Fill {
   #color
 

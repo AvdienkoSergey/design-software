@@ -1,3 +1,5 @@
+'use-strict'
+
 class Coordinate {
   #x
   #y

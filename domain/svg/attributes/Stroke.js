@@ -1,3 +1,5 @@
+'use-strict'
+
 class Stroke {
   #color
   #width

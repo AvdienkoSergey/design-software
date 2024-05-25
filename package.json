@@ -1,0 +1,28 @@
+{
+  "name": "program-design-project",
+  "version": "0.0.1",
+  "description": "Create the design of the program step by step. Create a convenient file structure",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvdienkoSergey/design-software.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AvdienkoSergey/design-software/issues"
+  },
+  "homepage": "https://github.com/AvdienkoSergey/design-software#readme",
+  "author": "Avdienko Sergey",
+  "license": "ISC",
+  "main": "main.mjs",
+  "scripts": {
+    "lint": "eslint",
+    "test": "test"
+  },
+  "keywords": [
+    "OOP",
+    "DesignProgram"
+  ],
+  "devDependencies": {
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0"
+  }
+}

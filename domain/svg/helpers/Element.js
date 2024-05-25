@@ -1,3 +1,5 @@
+'use-strict'
+
 import { Attribute } from './Attribute.js'
 
 class Element {

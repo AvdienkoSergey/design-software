@@ -1,3 +1,5 @@
+'use-strict'
+
 import { SvgGroup } from '../svg/SvgGroup.js'
 import { SvgLine } from '../svg/SvgLine.js'
 import { Coordinate } from '../svg/attributes/Coordinate.js'

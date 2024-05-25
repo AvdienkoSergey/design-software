@@ -1,3 +1,5 @@
+'use-strict'
+
 class FileSystemElement {
   #name
   #path
