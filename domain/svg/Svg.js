@@ -1,6 +1,6 @@
-import Element from './helpers/Element.js'
-import Attribute from './helpers/Attribute.js'
-import Figure from './helpers/Figure.js'
+import { Element } from './helpers/Element.js'
+import { Attribute } from './helpers/Attribute.js'
+import { Figure } from './helpers/Figure.js'
 
 class Svg extends Figure {
   constructor(Size) {
@@ -11,4 +11,4 @@ class Svg extends Figure {
   }
 }
 
-export default Svg
+export { Svg }

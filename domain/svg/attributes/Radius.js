@@ -1,15 +1,15 @@
 class Radius {
-  #radius;
+  #radius
 
   constructor(r) {
-    this.#radius = r;
+    this.#radius = r
   }
 
   calculate() {
     return {
       width: this.#radius,
-    };
+    }
   }
 }
 
-export default Radius;
+export { Radius }

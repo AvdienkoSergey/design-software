@@ -71,4 +71,4 @@ class Matrix {
   }
 }
 
-export default Matrix
+export { Matrix }

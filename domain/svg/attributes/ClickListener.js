@@ -1,16 +1,16 @@
 class ClickListener {
-  #callback;
+  #callback
   #key = Date.now()
   constructor(callback) {
     this.#callback = callback
   }
 
   getListener() {
-    return ({
+    return {
       key: this.#key,
-      callback: this.#callback
-    });
+      callback: this.#callback,
+    }
   }
 }
 
-export default ClickListener
+export { ClickListener }

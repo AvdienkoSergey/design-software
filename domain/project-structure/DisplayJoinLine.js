@@ -1,8 +1,8 @@
-import SvgGroup from '../svg/SvgGroup.js'
-import SvgLine from '../svg/SvgLine.js'
-import Coordinate from '../svg/attributes/Coordinate.js'
-import Stroke from '../svg/attributes/Stroke.js'
-import Color from '../svg/attributes/Color.js'
+import { SvgGroup } from '../svg/SvgGroup.js'
+import { SvgLine } from '../svg/SvgLine.js'
+import { Coordinate } from '../svg/attributes/Coordinate.js'
+import { Stroke } from '../svg/attributes/Stroke.js'
+import { Color } from '../svg/attributes/Color.js'
 
 class DisplayJoinLine {
   #x
@@ -24,8 +24,8 @@ class DisplayJoinLine {
   toSvgGroup() {
     const group = new SvgGroup()
     const line = new SvgLine(
-      new Coordinate(this.#x, this.#y),
-      new Coordinate(this.#x, this.#y),
+      new Coordinate(this.#x - this.#step, this.#y),
+      new Coordinate(this.#x - this.#step, this.#y + this.#step),
       new Stroke(new Color(this.#color))
     )
     group.append(line)
@@ -33,4 +33,4 @@ class DisplayJoinLine {
   }
 }
 
-export default DisplayJoinLine
+export { DisplayJoinLine }

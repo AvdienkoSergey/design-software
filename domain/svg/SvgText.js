@@ -1,6 +1,6 @@
-import Element from './helpers/Element.js'
-import Attribute from './helpers/Attribute.js'
-import Figure from './helpers/Figure.js'
+import { Element } from './helpers/Element.js'
+import { Attribute } from './helpers/Attribute.js'
+import { Figure } from './helpers/Figure.js'
 
 class SvgText extends Figure {
   constructor(Coordinate, Font, Fill) {
@@ -17,4 +17,4 @@ class SvgText extends Figure {
   }
 }
 
-export default SvgText
+export { SvgText }

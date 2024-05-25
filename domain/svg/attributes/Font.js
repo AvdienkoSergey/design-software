@@ -1,15 +1,15 @@
 class Font {
-  #size;
+  #size
 
   constructor(size) {
-    this.#size = size;
+    this.#size = size
   }
 
   calculate() {
     return {
       size: this.#size,
-    };
+    }
   }
 }
 
-export default Font;
+export { Font }

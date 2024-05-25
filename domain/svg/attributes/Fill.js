@@ -1,13 +1,13 @@
 class Fill {
-  #color;
+  #color
 
   constructor(Color) {
-    this.#color = Color.hex();
+    this.#color = Color.hex()
   }
 
   calculate() {
-    return this.#color;
+    return this.#color
   }
 }
 
-export default Fill;
+export { Fill }

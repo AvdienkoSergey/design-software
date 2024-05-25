@@ -1,5 +1,5 @@
-import Attribute from './Attribute.js'
-import Transition from '../attributes/Transition.js'
+import { Attribute } from './Attribute.js'
+import { Transition } from '../attributes/Transition.js'
 
 class Figure {
   #element
@@ -56,4 +56,4 @@ class Figure {
   }
 }
 
-export default Figure
+export { Figure }

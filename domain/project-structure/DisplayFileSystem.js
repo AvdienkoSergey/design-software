@@ -1,12 +1,12 @@
-import DisplayOptions from './DisplayOptions.js'
-import DisplayFileSystemElement from './DisplayFileSystemElement.js'
-import FileSystemElement from './FileSystemElement.js'
-import Svg from '../svg/Svg.js'
-import Coordinate from '../svg/attributes/Coordinate.js'
-import Size from '../svg/attributes/Size.js'
-import Matrix from './Matrix.js'
-import ClickListener from '../svg/attributes/ClickListener.js'
-import DisplayJoinLine from './DisplayJoinLine.js'
+import { DisplayOptions } from './DisplayOptions.js'
+import { DisplayFileSystemElement } from './DisplayFileSystemElement.js'
+import { FileSystemElement } from './FileSystemElement.js'
+import { Svg } from '../svg/Svg.js'
+import { Coordinate } from '../svg/attributes/Coordinate.js'
+import { Size } from '../svg/attributes/Size.js'
+import { Matrix } from './Matrix.js'
+import { ClickListener } from '../svg/attributes/ClickListener.js'
+import { DisplayJoinLine } from './DisplayJoinLine.js'
 
 class DisplayFileSysytem {
   #tree
@@ -54,29 +54,49 @@ class DisplayFileSysytem {
 
   #matrixToSvg(matrix) {
     const { width, height } = this.#calculateContainerSize(matrix)
-    const svgContainer = new Svg(new Size(width + 20, height + 20))
+    const svgContainer = new Svg(
+      new Size(width + this.#step * 1, height + this.#step * 1)
+    )
 
+    const pathToPoints = Array(matrix.length)
     for (let xi = 0; xi < matrix.length; xi++) {
       const column = matrix[xi]
+      const pathToPoint = []
+      pathToPoints[xi] = pathToPoint
       for (let yi = 0; yi < column.length; yi++) {
+        const xiModify = xi * this.#step * this.#ratio + this.#step
+        const yiModify = yi * this.#step * this.#ratio + this.#step
         if (matrix[xi][yi]) {
           const node = new DisplayFileSystemElement(
-            new Coordinate(
-              xi * this.#step * this.#ratio + 20,
-              yi * this.#step * this.#ratio + 20
-            ),
+            new Coordinate(xiModify, yiModify),
             new DisplayOptions({
               step: this.#step,
               ratio: this.#ratio,
-              color: 'black',
+              color: 'grey',
             }),
             new FileSystemElement(matrix[xi][yi].path),
             new ClickListener((file) => console.log(file))
           )
           svgContainer.append(node.toSvgGroup())
+        } else {
+          // console.log(new Coordinate(xiModify, yiModify))
+          pathToPoint.push(new Coordinate(xiModify, yiModify))
         }
       }
     }
+    console.log(pathToPoints)
+
+    // for (let y = 20; y < 640; y += 20) {
+    //   const joinLine = new DisplayJoinLine(
+    //     new Coordinate(20, y),
+    //     new DisplayOptions({
+    //       step: this.#step,
+    //       ratio: this.#ratio,
+    //       color: 'grey',
+    //     })
+    //   )
+    //   svgContainer.append(joinLine.toSvgGroup())
+    // }
 
     const container = document.getElementById('svg-container')
     container.innerHTML = ''
@@ -84,4 +104,4 @@ class DisplayFileSysytem {
   }
 }
 
-export default DisplayFileSysytem
+export { DisplayFileSysytem }

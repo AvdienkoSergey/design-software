@@ -1,14 +1,14 @@
 class Stroke {
-  #color;
-  #width;
-  #linecap;
-  #dasharray;
+  #color
+  #width
+  #linecap
+  #dasharray
 
-  constructor(Color, width = 1, linecap = "", dasharray = "") {
-    this.#color = Color.hex();
-    this.#width = width;
-    this.#linecap = linecap;
-    this.#dasharray = dasharray;
+  constructor(Color, width = 1, linecap = '', dasharray = '') {
+    this.#color = Color.hex()
+    this.#width = width
+    this.#linecap = linecap
+    this.#dasharray = dasharray
   }
 
   calculate() {
@@ -17,8 +17,8 @@ class Stroke {
       width: this.#width,
       linecap: this.#linecap,
       dasharray: this.#dasharray,
-    };
+    }
   }
 }
 
-export default Stroke;
+export { Stroke }

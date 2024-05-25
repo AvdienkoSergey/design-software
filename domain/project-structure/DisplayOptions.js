@@ -21,4 +21,4 @@ class DisplayOptions {
   }
 }
 
-export default DisplayOptions
+export { DisplayOptions }

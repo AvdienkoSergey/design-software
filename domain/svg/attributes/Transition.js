@@ -1,10 +1,10 @@
 class Transition {
-  #dx;
-  #dy;
+  #dx
+  #dy
 
   constructor(dx = 0, dy = 0) {
-    this.#dx = dx;
-    this.#dy = dy;
+    this.#dx = dx
+    this.#dy = dy
   }
 
   calculate() {
@@ -12,4 +12,4 @@ class Transition {
   }
 }
 
-export default Transition;
+export { Transition }

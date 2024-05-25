@@ -39,4 +39,4 @@ class FileSystemElement {
   }
 }
 
-export default FileSystemElement
+export { FileSystemElement }

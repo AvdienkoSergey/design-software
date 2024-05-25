@@ -1,6 +1,6 @@
-import Element from './helpers/Element.js'
-import Attribute from './helpers/Attribute.js'
-import Figure from './helpers/Figure.js'
+import { Element } from './helpers/Element.js'
+import { Attribute } from './helpers/Attribute.js'
+import { Figure } from './helpers/Figure.js'
 
 class SvgCircle extends Figure {
   constructor(Coordinate, Radius, Fill, Stroke) {
@@ -17,4 +17,4 @@ class SvgCircle extends Figure {
   }
 }
 
-export default SvgCircle
+export { SvgCircle }

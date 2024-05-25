@@ -1,14 +1,14 @@
 class Coordinate {
-  #x;
-  #y;
+  #x
+  #y
   constructor(x, y) {
-    this.#x = x;
-    this.#y = y;
+    this.#x = x
+    this.#y = y
   }
 
   calculate() {
-    return { x: this.#x, y: this.#y };
+    return { x: this.#x, y: this.#y }
   }
 }
 
-export default Coordinate;
+export { Coordinate }
