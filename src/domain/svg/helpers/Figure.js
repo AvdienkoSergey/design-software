@@ -44,7 +44,7 @@ class Figure {
   }
 
   append(figure) {
-    if (!figure instanceof Figure) {
+    if (figure instanceof Figure === false) {
       throw new Error('Please use an instance of the SvgFigure class')
     }
     const parent = this.toExtractHTML()

@@ -8,7 +8,6 @@ import { Coordinate } from '../svg/attributes/Coordinate.js'
 import { Size } from '../svg/attributes/Size.js'
 import { Matrix } from './Matrix.js'
 import { ClickListener } from '../svg/attributes/ClickListener.js'
-import { DisplayJoinLine } from './DisplayJoinLine.js'
 
 class DisplayFileSysytem {
   #tree
@@ -22,7 +21,9 @@ class DisplayFileSysytem {
   #getFileTree(path) {
     if (!this.#tree) {
       fetch(path)
-        .then((file) => file.json())
+        .then((file) => {
+          return file.json()
+        })
         .then((json) => {
           this.#tree = json
           this.#createMatrix(this.#tree)
@@ -77,7 +78,9 @@ class DisplayFileSysytem {
               color: 'grey',
             }),
             new FileSystemElement(matrix[xi][yi].path),
-            new ClickListener((file) => console.log(file))
+            new ClickListener((file) => {
+              return console.log(file)
+            })
           )
           svgContainer.append(node.toSvgGroup())
         } else {
@@ -87,18 +90,6 @@ class DisplayFileSysytem {
       }
     }
     console.log(pathToPoints)
-
-    // for (let y = 20; y < 640; y += 20) {
-    //   const joinLine = new DisplayJoinLine(
-    //     new Coordinate(20, y),
-    //     new DisplayOptions({
-    //       step: this.#step,
-    //       ratio: this.#ratio,
-    //       color: 'grey',
-    //     })
-    //   )
-    //   svgContainer.append(joinLine.toSvgGroup())
-    // }
 
     const container = document.getElementById('svg-container')
     container.innerHTML = ''

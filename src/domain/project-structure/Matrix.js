@@ -22,7 +22,9 @@ class Matrix {
   #transformTreeToMatrix(arr, offsetY = 0, offsetX = 0, currentColumn = []) {
     const moveY = (currentColumn, offsetY) => {
       return currentColumn.concat(
-        Array.from(new Array(offsetY), (point) => null)
+        Array.from(new Array(offsetY), () => {
+          return null
+        })
       )
     }
     const calculateMoveY = (point) => {
@@ -43,7 +45,11 @@ class Matrix {
     }
     if (this.#matrix.length < offsetX + 1) {
       const diff = offsetX + 1 - this.#matrix.length
-      this.#matrix = this.#matrix.concat(Array.from(new Array(diff), (x) => []))
+      this.#matrix = this.#matrix.concat(
+        Array.from(new Array(diff), () => {
+          return []
+        })
+      )
     }
     if (!this.#matrix[offsetX]) {
       throw new Error(offsetX + ' не может быть undefined')
@@ -51,7 +57,9 @@ class Matrix {
     if (this.#matrix[offsetX].length < currentColumn.length) {
       const diff = currentColumn.length - this.#matrix[offsetX].length
       this.#matrix[offsetX] = this.#matrix[offsetX].concat(
-        Array.from(new Array(diff), (x) => null)
+        Array.from(new Array(diff), () => {
+          return null
+        })
       )
 
       for (let i = 0; i < currentColumn.length; i++) {
@@ -64,7 +72,7 @@ class Matrix {
   }
 
   getMatrix() {
-    if (!this.#tree.hasOwnProperty('children')) {
+    if (!Object.hasOwn(this.#tree, 'children')) {
       throw new Error(
         'The tree does not comply with the contract. The children field is required for the root element'
       )

@@ -13,7 +13,7 @@ class SvgPathBezier extends Figure {
           CoordinateFrom.calculate().y
         } Q${coordinatesTo.reduce(
           (acc, Coordinate) =>
-            `${acc} ${Coordinate.calculate().x} ${Coordinate.calculate().y}`,
+            {return `${acc} ${Coordinate.calculate().x} ${Coordinate.calculate().y}`},
           ''
         )}`
       ),

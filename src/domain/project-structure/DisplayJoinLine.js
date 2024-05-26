@@ -12,12 +12,10 @@ class DisplayJoinLine {
   #color
   #step
   #ratio
-  #length
 
   constructor(coordinate, displayOptions) {
     this.#ratio = displayOptions.calculate().ratio
     this.#step = displayOptions.calculate().step * this.#ratio
-    this.#length = displayOptions.calculate().length
     this.#x = coordinate.calculate().x * this.#ratio
     this.#y = coordinate.calculate().y * this.#ratio
     this.#color = displayOptions.calculate().color

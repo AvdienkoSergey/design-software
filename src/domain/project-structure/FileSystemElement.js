@@ -2,26 +2,24 @@
 
 class FileSystemElement {
   #name
-  #path
   #type
   #children = []
   #relation = []
 
   constructor(path) {
-    this.#path = path
     this.#name = path.split('/').at(-1) || 'The root directory'
     this.#type = RegExp(/\.[0-9a-z]{1,5}$/i).test(path) ? 'File' : 'Directoty'
   }
 
-  addChild(fileSystemElement) {
-    if (!fileSystemElement instanceof FileSystemElement) {
+  addChild(file) {
+    if (file instanceof FileSystemElement == false) {
       throw new Error('Please use an instance of the FileSystemElement class')
     }
-    this.#children.push(fileSystemElement)
+    this.#children.push(file)
   }
 
   addRelation(file) {
-    if (!fileSystemElement instanceof FileSystemElement) {
+    if (file instanceof FileSystemElement == false) {
       throw new Error('Please use an instance of the FileSystemElement class')
     }
     if (!file.isFile()) {

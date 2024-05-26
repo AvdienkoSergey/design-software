@@ -2,7 +2,7 @@
 
 class UnderectedGraph {
   #vertices = 0
-  #edges = 0
+  // #edges = 0
   #adjacency = []
 
   constructor(v = 0) {
@@ -21,15 +21,10 @@ class UnderectedGraph {
     }
   }
 
-  #degree(v) {
-    this.#validate()
-    return this.#adjacency[v].length
-  }
-
   addEdge(from, to) {
     this.#validate(from)
     this.#validate(to)
-    this.#edges++
+    // this.#edges++
 
     this.#adjacency[from].push(to)
     this.#adjacency[to].push(from)
@@ -40,3 +35,5 @@ class UnderectedGraph {
     return this.#adjacency[v]
   }
 }
+
+export { UnderectedGraph }

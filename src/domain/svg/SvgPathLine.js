@@ -13,7 +13,7 @@ class SvgPathLine extends Figure {
           CoordinateFrom.calculate().y
         } L${coordinatesTo.reduce(
           (acc, Coordinate) =>
-            `${acc} ${Coordinate.calculate().x} ${Coordinate.calculate().y}`,
+            {return `${acc} ${Coordinate.calculate().x} ${Coordinate.calculate().y}`},
           ''
         )}`
       ),
