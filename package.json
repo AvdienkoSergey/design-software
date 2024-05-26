@@ -15,6 +15,7 @@
   "main": "main.mjs",
   "scripts": {
     "lint": "eslint --fix ./src/**/*.js ./src/**/*.mjs",
+    "jsdoc": "jsdoc -c jsdoc.json",
     "test": "jest"
   },
   "keywords": [
@@ -29,6 +30,7 @@
     "eslint-plugin-jest": "^28.5.0",
     "globals": "^15.3.0",
     "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdoc": "^4.0.3"
   }
 }

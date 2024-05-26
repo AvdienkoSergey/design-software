@@ -1,0 +1,21 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": ["src"],
+    "includePattern": ".js$",
+    "excludePattern": "(data/|future)"
+  },
+  "plugins": [],
+  "opts": {
+    "destination": "./docs",
+    "recurse": true,
+    "template": "node_modules/jsdoc/templates/default"
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  }
+}

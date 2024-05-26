@@ -21,6 +21,7 @@
 
 ## 0.0.1 (2024-05-04)
 
+- (docs): Added information about the rules for versioning and understanding the labels used in the file ([3f10198](https://github.com/AvdienkoSergey/design-software/commit/3f10198848eca25b3a56b5dbfaefcc578d5aae01))
 - (clean): Transferring files to a directory './src' Applying eslint rules ([4da2b70](https://github.com/AvdienkoSergey/design-software/commit/4da2b70fe60effd1bf1efa527737b9ecc8be64ed))
 - (test): Added Jest for testing. Configuring the Babbel Configuration([a1cf51d](https://github.com/AvdienkoSergey/design-software/commit/a1cf51dc3b0e66f5ef52e0e3378ed9d44cc1950f))
 - (clean): Added Eslint and "use-strict" for all files ([d3f2ce4](https://github.com/AvdienkoSergey/design-software/commit/d3f2ce49085cfe0eb121befd5a9eb034fc2e51b5))
