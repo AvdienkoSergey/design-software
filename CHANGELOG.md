@@ -1,5 +1,6 @@
 ## 0.0.1 (2024-05-04)
 
+- (clean): Added Eslint and "use-strict" for all files ([d3f2ce4](https://github.com/AvdienkoSergey/design-software/commit/d3f2ce49085cfe0eb121befd5a9eb034fc2e51b5))
 - (docs): Added Changelog.md. Updated the class export strategy ([94d9c7e](https://github.com/AvdienkoSergey/design-software/commit/94d9c7effe456a4eb624e6b4929b1eeed4321291))
 - (add): Add class ClickListener. Tracking events on Svg-based components ([af050cc](https://github.com/AvdienkoSergey/design-software/commit/af050cc18d89c9e45fdd3bbc2506c8aea605d43e))
 - (fix): The project tree is ready to be displayed in Svg format ([73fcc66](https://github.com/AvdienkoSergey/design-software/commit/73fcc66cd179779fb752375c736785a2b14711ee))
